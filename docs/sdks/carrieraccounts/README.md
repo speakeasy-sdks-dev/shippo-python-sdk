@@ -29,7 +29,6 @@ By default, if the query parameter is omitted, the `service_levels` property wil
 
 ```python
 import shippo
-from shippo.models import operations
 
 s = shippo.Shippo(
     api_key_header="<YOUR_API_KEY_HERE>",
@@ -37,7 +36,7 @@ s = shippo.Shippo(
 )
 
 
-res = s.carrier_accounts.list(request=operations.ListCarrierAccountsRequest())
+res = s.carrier_accounts.list()
 
 if res is not None:
     # handle response
@@ -51,15 +50,16 @@ if res is not None:
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
 | `request`                                                                                      | [operations.ListCarrierAccountsRequest](../../models/operations/listcarrieraccountsrequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
 
-
 ### Response
 
 **[components.CarrierAccountPaginatedList](../../models/components/carrieraccountpaginatedlist.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## create
 
@@ -106,15 +106,16 @@ if res is not None:
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `request`                                                                                                  | [components.ConnectExistingOwnAccountRequest](../../models/components/connectexistingownaccountrequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
 
-
 ### Response
 
 **[components.CarrierAccount](../../models/components/carrieraccount.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## get
 
@@ -145,15 +146,16 @@ if res is not None:
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `carrier_account_id`             | *str*                            | :heavy_check_mark:               | Object ID of the carrier account |
 
-
 ### Response
 
 **[components.CarrierAccount](../../models/components/carrieraccount.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## update
 
@@ -213,15 +215,16 @@ if res is not None:
 | `carrier_account_id`                                                                     | *str*                                                                                    | :heavy_check_mark:                                                                       | Object ID of the carrier account                                                         |
 | `carrier_account_base`                                                                   | [Optional[components.CarrierAccountBase]](../../models/components/carrieraccountbase.md) | :heavy_minus_sign:                                                                       | Examples.                                                                                |
 
-
 ### Response
 
 **[components.CarrierAccount](../../models/components/carrieraccount.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## initiate_oauth2_signin
 
@@ -238,7 +241,7 @@ s = shippo.Shippo(
 )
 
 
-res = s.carrier_accounts.initiate_oauth2_signin(carrier_account_object_id='<value>', redirect_uri='http://fine-cummerbund.biz', state='<value>')
+res = s.carrier_accounts.initiate_oauth2_signin(carrier_account_object_id='<value>', redirect_uri='http://fine-cummerbund.biz')
 
 if res is not None:
     # handle response
@@ -254,10 +257,10 @@ if res is not None:
 | `redirect_uri`                                                                                                                                                                                                 | *str*                                                                                                                                                                                                          | :heavy_check_mark:                                                                                                                                                                                             | Callback URL. The URL that tells the authorization server where to send the user back to after they approve the request.                                                                                       |
 | `state`                                                                                                                                                                                                        | *Optional[str]*                                                                                                                                                                                                | :heavy_minus_sign:                                                                                                                                                                                             | A random string generated by the consuming application and included in the request to prevent CSRF attacks. The consuming application checks that the same value is returned after the user authorizes Shippo. |
 
-
 ### Response
 
 **[operations.InitiateOauth2SigninResponse](../../models/operations/initiateoauth2signinresponse.md)**
+
 ### Errors
 
 | Error Object                                                   | Status Code                                                    | Content Type                                                   |
@@ -266,6 +269,7 @@ if res is not None:
 | errors.InitiateOauth2SigninCarrierAccountsResponseBody         | 401                                                            | application/json                                               |
 | errors.InitiateOauth2SigninCarrierAccountsResponseResponseBody | 404                                                            | application/json                                               |
 | errors.SDKError                                                | 4xx-5xx                                                        | */*                                                            |
+
 
 ## register
 
@@ -300,15 +304,16 @@ if res is not None:
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | `request`                                                                                                    | [operations.RegisterCarrierAccountRequestBody](../../models/operations/registercarrieraccountrequestbody.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
 
-
 ### Response
 
 **[components.CarrierAccount](../../models/components/carrieraccount.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## get_registration_status
 
@@ -340,10 +345,10 @@ if res is not None:
 | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------------- |
 | `carrier`                                                | [operations.Carrier](../../models/operations/carrier.md) | :heavy_check_mark:                                       | filter by specific carrier                               |
 
-
 ### Response
 
 **[components.CarrierAccountRegistrationStatus](../../models/components/carrieraccountregistrationstatus.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
