@@ -59,33 +59,7 @@ res = s.rates_at_checkout.create(request=components.LiveRateCreateRequest(
         ),
     ],
     address_from='<value>',
-    parcel=components.Parcel(
-        mass_unit=components.WeightUnitEnum.LB,
-        weight='1',
-        distance_unit=components.DistanceUnitEnum.IN,
-        height='1',
-        length='1',
-        width='1',
-        extra=components.ParcelExtra(
-            cod=components.Cod(
-                amount='5.5',
-                currency='USD',
-                payment_method=components.PaymentMethod.CASH,
-            ),
-            insurance=components.ParcelInsurance(
-                amount='5.5',
-                content='Laptop',
-                currency='USD',
-                provider=components.ParcelInsuranceProvider.UPS,
-            ),
-        ),
-        metadata='Customer ID 123456',
-        object_created=dateutil.parser.isoparse('2014-07-09T02:19:13.174Z'),
-        object_id='adcfdddf8ec64b84ad22772bce3ea37a',
-        object_owner='shippotle@shippo.com',
-        object_state=components.ObjectState.VALID,
-        object_updated=dateutil.parser.isoparse('2014-07-09T02:19:13.174Z'),
-    ),
+    parcel='5df144dca289442cv7a06',
 ))
 
 if res is not None:

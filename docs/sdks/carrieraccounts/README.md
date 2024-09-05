@@ -188,10 +188,10 @@ res = s.carrier_accounts.update(carrier_account_id='<value>', carrier_account_ba
         company='Shippo',
         email='hippo@shippo.com',
         full_name='Shippo Meister',
-        has_invoice=False,
+        has_invoice=True,
         phone='1112223333',
         title='Manager',
-        ups_agreements=False,
+        ups_agreements=True,
         aia_country_iso2='US',
         billing_address_street2='STE 200',
         currency_code='USD',
@@ -287,9 +287,28 @@ s = shippo.Shippo(
 )
 
 
-res = s.carrier_accounts.register(request=components.CarrierAccountColissimoCreateRequest(
+res = s.carrier_accounts.register(request=components.CarrierAccountUPSCreateRequest(
     carrier='colissimo',
-    parameters=components.CarrierAccountColissimoCreateRequestParameters(),
+    parameters=components.CarrierAccountUPSCreateRequestParameters(
+        billing_address_city='San Francisco',
+        billing_address_country_iso2='US',
+        billing_address_state='CA',
+        billing_address_street1='731 Market St',
+        billing_address_zip='94103',
+        pickup_address_city='San Francisco',
+        pickup_address_country_iso2='US',
+        pickup_address_state='CA',
+        pickup_address_street1='731 Market St',
+        pickup_address_zip='94103',
+        ups_agreements=False,
+        billing_address_street2='STE 200',
+        company='Shippo',
+        email='hippo@shippo.com',
+        full_name='Shippo Meister',
+        phone='1112223333',
+        pickup_address_same_as_billing_address=False,
+        pickup_address_street2='STE 200',
+    ),
 ))
 
 if res is not None:
