@@ -59,7 +59,33 @@ res = s.rates_at_checkout.create(request=components.LiveRateCreateRequest(
         ),
     ],
     address_from='<value>',
-    parcel='5df144dca289442cv7a06',
+    parcel=components.Parcel(
+        mass_unit=components.WeightUnitEnum.LB,
+        weight='1',
+        distance_unit=components.DistanceUnitEnum.IN,
+        height='1',
+        length='1',
+        width='1',
+        extra=components.ParcelExtra(
+            cod=components.Cod(
+                amount='5.5',
+                currency='USD',
+                payment_method=components.PaymentMethod.CASH,
+            ),
+            insurance=components.ParcelInsurance(
+                amount='5.5',
+                content='Laptop',
+                currency='USD',
+                provider=components.ParcelInsuranceProvider.UPS,
+            ),
+        ),
+        metadata='Customer ID 123456',
+        object_created=dateutil.parser.isoparse('2014-07-09T02:19:13.174Z'),
+        object_id='adcfdddf8ec64b84ad22772bce3ea37a',
+        object_owner='shippotle@shippo.com',
+        object_state=components.ObjectState.VALID,
+        object_updated=dateutil.parser.isoparse('2014-07-09T02:19:13.174Z'),
+    ),
 ))
 
 if res is not None:
@@ -74,15 +100,16 @@ if res is not None:
 | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
 | `request`                                                                            | [components.LiveRateCreateRequest](../../models/components/liveratecreaterequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
 
-
 ### Response
 
 **[components.LiveRatePaginatedList](../../models/components/liveratepaginatedlist.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## get_default_parcel_template
 
@@ -107,15 +134,16 @@ if res is not None:
 
 ```
 
-
 ### Response
 
 **[components.DefaultParcelTemplate](../../models/components/defaultparceltemplate.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## update_default_parcel_template
 
@@ -125,6 +153,7 @@ Update the currently configured default parcel template for live rates. The obje
 
 ```python
 import shippo
+from shippo.models import components
 
 s = shippo.Shippo(
     api_key_header="<YOUR_API_KEY_HERE>",
@@ -132,7 +161,9 @@ s = shippo.Shippo(
 )
 
 
-res = s.rates_at_checkout.update_default_parcel_template(object_id='b958d3690bb04bb8b2986724872750f5')
+res = s.rates_at_checkout.update_default_parcel_template(request=components.DefaultParcelTemplateUpdateRequest(
+    object_id='b958d3690bb04bb8b2986724872750f5',
+))
 
 if res is not None:
     # handle response
@@ -146,15 +177,16 @@ if res is not None:
 | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- | -------------------------------- |
 | `object_id`                      | *Optional[str]*                  | :heavy_minus_sign:               | N/A                              | b958d3690bb04bb8b2986724872750f5 |
 
-
 ### Response
 
 **[components.DefaultParcelTemplate](../../models/components/defaultparceltemplate.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
 | --------------- | --------------- | --------------- |
 | errors.SDKError | 4xx-5xx         | */*             |
+
 
 ## delete_default_parcel_template
 
