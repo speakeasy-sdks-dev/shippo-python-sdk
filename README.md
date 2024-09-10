@@ -142,6 +142,11 @@ Review our full guides and references at [https://docs.goshippo.com/](https://do
 * [register](docs/sdks/carrieraccounts/README.md#register) - Add a Shippo carrier account
 * [get_registration_status](docs/sdks/carrieraccounts/README.md#get_registration_status) - Get Carrier Registration status
 
+### [carrier_parcel_templates](docs/sdks/carrierparceltemplates/README.md)
+
+* [list](docs/sdks/carrierparceltemplates/README.md#list) - List all carrier parcel templates
+* [get](docs/sdks/carrierparceltemplates/README.md#get) - Retrieve a carrier parcel templates
+
 ### [customs_declarations](docs/sdks/customsdeclarations/README.md)
 
 * [list](docs/sdks/customsdeclarations/README.md#list) - List all customs declarations
@@ -154,13 +159,6 @@ Review our full guides and references at [https://docs.goshippo.com/](https://do
 * [create](docs/sdks/customsitems/README.md#create) - Create a new customs item
 * [get](docs/sdks/customsitems/README.md#get) - Retrieve a customs item
 
-### [rates_at_checkout](docs/sdks/ratesatcheckout/README.md)
-
-* [create](docs/sdks/ratesatcheckout/README.md#create) - Generate a live rates request
-* [get_default_parcel_template](docs/sdks/ratesatcheckout/README.md#get_default_parcel_template) - Show current default parcel template
-* [update_default_parcel_template](docs/sdks/ratesatcheckout/README.md#update_default_parcel_template) - Update default parcel template
-* [delete_default_parcel_template](docs/sdks/ratesatcheckout/README.md#delete_default_parcel_template) - Clear current default parcel template
-
 ### [manifests](docs/sdks/manifests/README.md)
 
 * [list](docs/sdks/manifests/README.md#list) - List all manifests
@@ -172,11 +170,6 @@ Review our full guides and references at [https://docs.goshippo.com/](https://do
 * [list](docs/sdks/orders/README.md#list) - List all orders
 * [create](docs/sdks/orders/README.md#create) - Create a new order
 * [get](docs/sdks/orders/README.md#get) - Retrieve an order
-
-### [carrier_parcel_templates](docs/sdks/carrierparceltemplates/README.md)
-
-* [list](docs/sdks/carrierparceltemplates/README.md#list) - List all carrier parcel templates
-* [get](docs/sdks/carrierparceltemplates/README.md#get) - Retrieve a carrier parcel templates
 
 ### [parcels](docs/sdks/parcels/README.md)
 
@@ -193,6 +186,13 @@ Review our full guides and references at [https://docs.goshippo.com/](https://do
 * [get](docs/sdks/rates/README.md#get) - Retrieve a rate
 * [list_shipment_rates](docs/sdks/rates/README.md#list_shipment_rates) - Retrieve shipment rates
 * [list_shipment_rates_by_currency_code](docs/sdks/rates/README.md#list_shipment_rates_by_currency_code) - Retrieve shipment rates in currency
+
+### [rates_at_checkout](docs/sdks/ratesatcheckout/README.md)
+
+* [create](docs/sdks/ratesatcheckout/README.md#create) - Generate a live rates request
+* [get_default_parcel_template](docs/sdks/ratesatcheckout/README.md#get_default_parcel_template) - Show current default parcel template
+* [update_default_parcel_template](docs/sdks/ratesatcheckout/README.md#update_default_parcel_template) - Update default parcel template
+* [delete_default_parcel_template](docs/sdks/ratesatcheckout/README.md#delete_default_parcel_template) - Clear current default parcel template
 
 ### [refunds](docs/sdks/refunds/README.md)
 
@@ -213,6 +213,16 @@ Review our full guides and references at [https://docs.goshippo.com/](https://do
 * [create](docs/sdks/shipments/README.md#create) - Create a new shipment
 * [get](docs/sdks/shipments/README.md#get) - Retrieve a shipment
 
+### [Shippo SDK](docs/sdks/shippo/README.md)
+
+
+### [shippo_accounts](docs/sdks/shippoaccounts/README.md)
+
+* [list](docs/sdks/shippoaccounts/README.md#list) - List all Shippo Accounts
+* [create](docs/sdks/shippoaccounts/README.md#create) - Create a Shippo Account
+* [get](docs/sdks/shippoaccounts/README.md#get) - Retrieve a Shippo Account
+* [update](docs/sdks/shippoaccounts/README.md#update) - Update a Shippo Account
+
 ### [tracking_status](docs/sdks/trackingstatus/README.md)
 
 * [create](docs/sdks/trackingstatus/README.md#create) - Register a tracking webhook
@@ -231,13 +241,6 @@ Review our full guides and references at [https://docs.goshippo.com/](https://do
 * [delete](docs/sdks/userparceltemplates/README.md#delete) - Delete a user parcel template
 * [get](docs/sdks/userparceltemplates/README.md#get) - Retrieves a user parcel template
 * [update](docs/sdks/userparceltemplates/README.md#update) - Update an existing user parcel template
-
-### [shippo_accounts](docs/sdks/shippoaccounts/README.md)
-
-* [list](docs/sdks/shippoaccounts/README.md#list) - List all Shippo Accounts
-* [create](docs/sdks/shippoaccounts/README.md#create) - Create a Shippo Account
-* [get](docs/sdks/shippoaccounts/README.md#get) - Retrieve a Shippo Account
-* [update](docs/sdks/shippoaccounts/README.md#update) - Update a Shippo Account
 
 ### [webhooks](docs/sdks/webhooks/README.md)
 

@@ -14,7 +14,7 @@ features:
   python:
     additionalDependencies: 0.1.0
     constsAndDefaults: 0.1.4
-    core: 4.8.7
+    core: 4.8.8
     flattening: 2.81.1
     globalSecurity: 2.83.7
     globalSecurityCallbacks: 0.1.0
@@ -846,7 +846,7 @@ examples:
         application/json: {"account_id": "****", "carrier": "usps", "parameters": {"account_number": "94567e", "aia_country_iso2": "US", "billing_address_city": "San Francisco", "billing_address_country_iso2": "US", "billing_address_state": "CA", "billing_address_street1": "731 Market St", "billing_address_street2": "STE 200", "billing_address_zip": "94103", "collec_country_iso2": "US", "collec_zip": "94103", "company": "Shippo", "currency_code": "USD", "email": "hippo@shippo.com", "full_name": "Shippo Meister", "has_invoice": true, "invoice_controlid": "1234", "invoice_date": "20210529", "invoice_number": "1112234", "invoice_value": "11.23", "phone": "1112223333", "title": "Manager", "ups_agreements": true}}
       responses:
         "200":
-          application/json: {"account_id": "****", "carrier": "usps", "parameters": {"key": "<value>"}, "carrier_name": "USPS", "is_shippo_account": false, "object_id": "6aa34d5f6865448fbb1ee93636e98999", "object_owner": "bob+22@gmail.com", "service_levels": [], "test": false}
+          application/json: {"account_id": "****", "carrier": "usps", "parameters": {"account_number": "94567e", "aia_country_iso2": "US", "billing_address_city": "San Francisco", "billing_address_country_iso2": "US", "billing_address_state": "CA", "billing_address_street1": "731 Market St", "billing_address_street2": "STE 200", "billing_address_zip": "94103", "collec_country_iso2": "US", "collec_zip": "94103", "company": "Shippo", "currency_code": "USD", "email": "hippo@shippo.com", "full_name": "Shippo Meister", "has_invoice": true, "invoice_controlid": "1234", "invoice_date": "20210529", "invoice_number": "1112234", "invoice_value": "11.23", "phone": "1112223333", "title": "Manager", "ups_agreements": true}, "carrier_name": "USPS", "is_shippo_account": false, "object_id": "6aa34d5f6865448fbb1ee93636e98999", "object_owner": "bob+22@gmail.com", "service_levels": [], "test": false}
   InitiateOauth2Signin:
     speakeasy-default-initiate-oauth2-signin:
       parameters:
@@ -865,7 +865,7 @@ examples:
   RegisterCarrierAccount:
     speakeasy-default-register-carrier-account:
       requestBody:
-        application/json: {"carrier": "colissimo"}
+        application/json: {"carrier": "colissimo", "parameters": {"billing_address_city": "San Francisco", "billing_address_country_iso2": "US", "billing_address_state": "CA", "billing_address_street1": "731 Market St", "billing_address_street2": "STE 200", "billing_address_zip": "94103", "company": "Shippo", "email": "hippo@shippo.com", "full_name": "Shippo Meister", "phone": "1112223333", "pickup_address_city": "San Francisco", "pickup_address_country_iso2": "US", "pickup_address_same_as_billing_address": false, "pickup_address_state": "CA", "pickup_address_street1": "731 Market St", "pickup_address_street2": "STE 200", "pickup_address_zip": "94103", "ups_agreements": true}}
       responses:
         "201":
           application/json: {"account_id": "****", "carrier": "usps", "parameters": {"key": "<value>", "key1": "<value>"}, "carrier_name": "USPS", "is_shippo_account": false, "object_id": "6aa34d5f6865448fbb1ee93636e98999", "object_owner": "bob+22@gmail.com", "service_levels": [], "test": false}
