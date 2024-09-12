@@ -70,10 +70,10 @@ if res is not None:
 | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
 | `request`                                                      | [components.PickupBase](../../models/components/pickupbase.md) | :heavy_check_mark:                                             | The request object to use for the request.                     |
 
-
 ### Response
 
 **[components.Pickup](../../models/components/pickup.md)**
+
 ### Errors
 
 | Error Object    | Status Code     | Content Type    |
