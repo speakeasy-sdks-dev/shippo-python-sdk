@@ -41,6 +41,7 @@ Optional path parameters:<br>
 
 ```python
 import shippo
+from shippo.models import operations
 
 s = shippo.Shippo(
     api_key_header="<YOUR_API_KEY_HERE>",
@@ -48,7 +49,7 @@ s = shippo.Shippo(
 )
 
 
-res = s.shipments.list()
+res = s.shipments.list(request=operations.ListShipmentsRequest())
 
 if res is not None:
     # handle response

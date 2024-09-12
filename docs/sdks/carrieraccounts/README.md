@@ -29,6 +29,7 @@ By default, if the query parameter is omitted, the `service_levels` property wil
 
 ```python
 import shippo
+from shippo.models import operations
 
 s = shippo.Shippo(
     api_key_header="<YOUR_API_KEY_HERE>",
@@ -36,7 +37,7 @@ s = shippo.Shippo(
 )
 
 
-res = s.carrier_accounts.list()
+res = s.carrier_accounts.list(request=operations.ListCarrierAccountsRequest())
 
 if res is not None:
     # handle response
@@ -300,7 +301,7 @@ res = s.carrier_accounts.register(request=components.CarrierAccountUPSCreateRequ
         pickup_address_state='CA',
         pickup_address_street1='731 Market St',
         pickup_address_zip='94103',
-        ups_agreements=False,
+        ups_agreements=True,
         billing_address_street2='STE 200',
         company='Shippo',
         email='hippo@shippo.com',
