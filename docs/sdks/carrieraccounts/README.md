@@ -289,7 +289,7 @@ s = shippo.Shippo(
 
 
 res = s.carrier_accounts.register(request=components.CarrierAccountUPSCreateRequest(
-    carrier='correos',
+    carrier='ups',
     parameters=components.CarrierAccountUPSCreateRequestParameters(
         billing_address_city='San Francisco',
         billing_address_country_iso2='US',
@@ -301,7 +301,7 @@ res = s.carrier_accounts.register(request=components.CarrierAccountUPSCreateRequ
         pickup_address_state='CA',
         pickup_address_street1='731 Market St',
         pickup_address_zip='94103',
-        ups_agreements=False,
+        ups_agreements=True,
         billing_address_street2='STE 200',
         company='Shippo',
         email='hippo@shippo.com',
